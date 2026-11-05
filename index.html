@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judith Echeagaray — Portafolio Profesional</title>
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="style/diseno.css">
+</head>
+<body>
+
+  <!-- CABECERA NAV -->
+  <header>
+    <a href="#" class="logo-brand">JE<span>.</span></a>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a href="#certificaciones" data-i18n="nav_certs">Certificaciones</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-controls">
+      <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
+
+      <button onclick="toggleTheme()" class="theme-btn" aria-label="Cambiar Tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero-container">
+    <div class="hero-text">
+      <h1 data-i18n="hero_title">Hola, soy <br><span>Judith Echeagaray.</span></h1>
+      <p class="hero-subtitle" data-i18n="hero_role">Sobre mí</p>
+      <p class="hero-bio" data-i18n="hero_bio">
+        Destaco por mi pensamiento analítico, trabajo en equipo y capacidad para resolver problemas. Busco colaborar en proyectos reales donde pueda aportar valor mientras sigo expandiendo mis competencias técnicas.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn-primary" data-i18n="btn_work">Ver proyectos &rarr;</a>
+        <a href="documentos/CV_JE.pdf" target="_blank" class="btn-secondary">
+        <i class="fa-solid fa-file-pdf"></i> <span data-i18n="btn_cv">Descargar CV</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Fotografía B&N con marco y tarjeta flotante -->
+    <div class="hero-image-wrapper">
+      <div class="photo-card">
+        <img src="imagenes/imgTitulo.jpeg" alt="Judith Echeagaray">
+      </div>
+      
+      <div class="floating-badge">
+        <div class="badge-status">
+          <span class="status-dot"></span>
+          <span data-i18n="status_title">Disponible</span>
+        </div>
+        <p class="badge-text" data-i18n="status_desc">Abierta a proyectos 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tech-banner">
+    <div class="tech-container">
+      <span>HTML5 Semántico</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>MySQL</span>
+      <span>Cisco Packet Tracer</span>
+    </div>
+  </div>
+
+  <section id="proyectos" class="section-container">
+    <p class="section-tag" data-i18n="tag_projects">Trabajos Destacados</p>
+    <div class="section-header">
+      <h2 data-i18n="title_projects">Diseñando experiencias digitales con impacto.</h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <img src="imagenes/ImgPalo Alto.png" alt="Huaracheria Palo Alto" class="project-thumb">
+        <div class="project-info">
+          <div>
+            <h3>Huaracheria Palo Alto</h3>
+            <p data-i18n="p1_desc">Plataforma de E-Commerce</p>
+          </div>
+          <a href="https://jjecheagaraysss.github.io/Huaracheria-Palo-Alto/" target="_blank" class="btn-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card">
+        <img src="imagenes/imgAuraWear.png" alt="AuraWear" class="project-thumb">
+        <div class="project-info">
+          <div>
+            <h3>AuraWear</h3>
+            <p data-i18n="p2_desc">Plataforma de E-Commerce</p>
+          </div>
+          <a href="https://jjecheagaraysss.github.io/AuraWear/" target="_blank" class="btn-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="section-container">
+    <div class="testimonial-card">
+      <div class="quote-mark">“</div>
+      <div>
+        <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 12px;" data-i18n="about_quote">
+          Estudiante de TI especializada en Front-End, bases de datos y redes. Destaco por mi orientación al detalle, trabajo en equipo y rápido aprendizaje para resolver retos reales.
+        </p>
+        <p style="font-size: 0.9rem; color: var(--accent-coral); font-weight: 700;">
+          <span data-i18n="title_languages">Idiomas:</span> Español (Nativo) • Inglés (C2) • Francés (A2)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificaciones" class="section-container">
+    <p class="section-tag" data-i18n="tag_certs">Acreditaciones</p>
+    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 25px;" data-i18n="title_certs">Certificaciones Oficiales</h2>
+    <div class="projects-grid">
+      <div class="project-card" style="padding: 25px;">
+        <i class="fa-solid fa-award" style="font-size: 2rem; color: var(--accent-coral); margin-bottom: 15px;"></i>
+        <h4>CCNA: Switching, Routing, and Wireless Essentials</h4>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Cisco Networking Academy • 2025</p>
+      </div>
+      <div class="project-card" style="padding: 25px;">
+        <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--accent-coral); margin-bottom: 15px;"></i>
+        <h4>Curso Finder</h4>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Carlos Slim • 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div>
+      <h3 data-i18n="footer_title">Contáctame para hacer magia.</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">
+        <span data-i18n="footer_email">Correo electrónico:</span> 
+        <a href="mailto:jjecheagarays@gmail.com" style="color: var(--accent-coral); font-weight: 600;">jjecheagarays@gmail.com</a>
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">
+        <span data-i18n="footer_phone">Contacto Telefónico:</span> 
+        <a href="tel:6676564939" style="color: var(--accent-coral); font-weight: 600;">667 656 4939</a>
+      </p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://github.com/jjecheagaraysss" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:jjecheagarays@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Modo Oscuro / Claro
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // 2. Traducción a 3 Idiomas (ES, EN, FR)
+    const translations = {
+      es: {
+        nav_home: "Inicio",
+        nav_projects: "Proyectos",
+        nav_about: "Sobre mí",
+        nav_certs: "Certificaciones",
+        hero_title: "Hola, soy <br><span>Judith Echeagaray.</span>",
+        hero_role: "Sobre mí",
+        hero_bio: "Destaco por mi pensamiento analítico, trabajo en equipo y capacidad para resolver problemas. Busco colaborar en proyectos reales donde pueda aportar valor mientras sigo expandiendo mis competencias técnicas.",
+        btn_work: "Ver proyectos →",
+        btn_cv: "Descargar CV",
+        status_title: "Disponible",
+        status_desc: "Abierta a proyectos 2026",
+        tag_projects: "Trabajos Destacados",
+        title_projects: "Diseñando experiencias digitales con impacto.",
+        p1_desc: "Plataforma de E-Commerce",
+        p2_desc: "Plataforma de E-Commerce",
+        about_quote: "Estudiante de TI especializada en Front-End, bases de datos y redes. Destaco por mi orientación al detalle, trabajo en equipo y rápido aprendizaje para resolver retos reales.",
+        title_languages: "Idiomas:",
+        tag_certs: "Acreditaciones",
+        title_certs: "Certificaciones Oficiales",
+        footer_title: "Contáctame para hacer magia.",
+        footer_email: "Correo electrónico:",
+        footer_phone: "Contacto Telefónico:"
+      },
+      en: {
+        nav_home: "Home",
+        nav_projects: "Projects",
+        nav_about: "About Me",
+        nav_certs: "Certifications",
+        hero_title: "Hi, I'm <br><span>Judith Echeagaray.</span>",
+        hero_role: "About Me",
+        hero_bio: "Known for my analytical thinking, teamwork, and problem-solving skills. I am looking to collaborate on real projects where I can add value while expanding my technical skills.",
+        btn_work: "View work →",
+        btn_cv: "Download Resume",
+        status_title: "Available",
+        status_desc: "Open for projects 2026",
+        tag_projects: "Selected Work",
+        title_projects: "Designing digital experiences that make an impact.",
+        p1_desc: "E-Commerce Platform",
+        p2_desc: "E-Commerce Platform",
+        about_quote: "IT student specialized in Front-End, databases, and networking. Outstanding attention to detail, teamwork, and fast learning to solve real-world challenges.",
+        title_languages: "Languages:",
+        tag_certs: "Accreditations",
+        title_certs: "Official Certifications",
+        footer_title: "Contact me to create magic.",
+        footer_email: "Email address:",
+        footer_phone: "Phone Contact:"
+      },
+      fr: {
+        nav_home: "Accueil",
+        nav_projects: "Projets",
+        nav_about: "À propos",
+        nav_certs: "Certifications",
+        hero_title: "Bonjour, je suis <br><span>Judith Echeagaray.</span>",
+        hero_role: "À propos de moi",
+        hero_bio: "Je me distingue par ma pensée analytique, mon travail d'équipe et ma capacité a résoudre des problèmes. Je cherche à collaborer sur des projets réels.",
+        btn_work: "Voir projets →",
+        btn_cv: "Télécharger CV",
+        status_title: "Disponible",
+        status_desc: "Ouverte aux projets 2026",
+        tag_projects: "Travaux Sélectionnés",
+        title_projects: "Concevoir des expériences numériques avec impact.",
+        p1_desc: "Plateforme de E-Commerce",
+        p2_desc: "Plateforme de E-Commerce",
+        about_quote: "Étudiante en TI spécialisée en Front-End, bases de données et réseaux. Orientée vers le détail, le travail d'équipe et l'apprentissage rapide.",
+        title_languages: "Langues:",
+        tag_certs: "Accréditations",
+        title_certs: "Certifications Officielles",
+        footer_title: "Contactez-moi pour faire de la magie.",
+        footer_email: "Courriel électronique:",
+        footer_phone: "Contact téléphonique:"
+      }
+    };
+
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    function downloadCV() {
+      alert("Iniciando descarga del Curriculum Vitae (PDF) de Judith Echeagaray...");
+    }
+  </script>
+</body>
+</html>
