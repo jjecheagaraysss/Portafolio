@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Estilos Warm Editorial en Verde Esmeralda (Alex Morgan Style)
-   ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
@@ -43,7 +39,6 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Header & Nav Flotante */
 header {
   display: flex;
   justify-content: space-between;
@@ -107,7 +102,12 @@ nav ul li a:hover {
   color: var(--text-main);
 }
 
-/* Hero Layout */
+/* Ocultar el checkbox y botón de menú en pantallas de escritorio */
+.menu-checkbox, 
+.menu-btn {
+  display: none;
+}
+
 .hero-container {
   max-width: 1100px;
   margin: 40px auto 80px;
@@ -149,7 +149,6 @@ nav ul li a:hover {
   align-items: center;
 }
 
-/* Pill Buttons */
 .btn-primary {
   background-color: var(--accent-green);
   color: #FFFFFF;
@@ -189,7 +188,6 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Foto Ovalada/Marco y Tarjeta Flotante */
 .hero-image-wrapper {
   position: relative;
   display: flex;
@@ -210,7 +208,6 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Mantiene la foto en B&N pulcra */
   filter: grayscale(100%);
 }
 
@@ -250,7 +247,6 @@ nav ul li a:hover {
   margin-top: 4px;
 }
 
-/* Banda de Tecnologías */
 .tech-banner {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -271,7 +267,6 @@ nav ul li a:hover {
   font-size: 0.9rem;
 }
 
-/* Sección Proyectos */
 .section-container {
   max-width: 1100px;
   margin: 0 auto 80px;
@@ -363,7 +358,6 @@ nav ul li a:hover {
   color: #FFFFFF;
 }
 
-/* Tarjeta Formación / Sobre Mí */
 .testimonial-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -408,19 +402,77 @@ footer h3 {
   color: var(--accent-green);
 }
 
-/* Responsivo */
+/* ==========================================
+   MENÚ RESPONSIVO ADAPTADO A TU PALETA VERDE
+   ========================================== */
 @media (max-width: 868px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  /* Mostrar botón de hamburguesa */
+  .menu-btn {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 6px 10px;
+  }
+
+  /* Ocultar navegación por defecto */
+  nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 15px;
+  }
+
+  /* Mostrar menú cuando se activa el checkbox */
+  .menu-checkbox:checked ~ nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+
+  /* Tarjetas redondeadas que cambian dinámicamente según el tema (Claro/Oscuro) */
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  nav ul li a:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-2px);
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .hero-bio {
     margin: 0 auto 30px;
   }
+
   .hero-buttons {
     justify-content: center;
-  }
-  nav ul {
-    display: none;
   }
 }
